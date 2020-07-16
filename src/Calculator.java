@@ -12,32 +12,16 @@ public class Calculator {
         return expression;
     }
 
-    public void setExpression(String expression) {
-        this.expression = expression;
-    }
-
     public int getIndex() {
         return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
     }
 
     public String getFirstDigit() {
         return firstDigit;
     }
 
-    public void setFirstDigit(String firstDigit) {
-        this.firstDigit = firstDigit;
-    }
-
     public String getSecondDigit() {
         return secondDigit;
-    }
-
-    public void setSecondDigit(String secondDigit) {
-        this.secondDigit = secondDigit;
     }
 
     public void ArrayTrim(String input) throws Exception {
@@ -75,7 +59,7 @@ public class Calculator {
             case 2:
                 cal.firstDigit = RomanNums.getArabian(cal.firstDigit);
                 cal.secondDigit = RomanNums.getArabian(cal.secondDigit);
-                System.out.println("Ответ: "+new Math(cal).getOutput());
+                System.out.println("Ответ: "+RomanNums.getRoman(new Math(cal).getOutput()));
                 break;
             case -1:
                 throw new Exception("Недопустимые числа");
